@@ -1,0 +1,1 @@
+# eslint-plugin-void-only-side-effects
