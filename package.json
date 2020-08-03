@@ -5,5 +5,8 @@
   "main": "index.js",
   "author": "Jemi S. Salo <jemi.salo@gmail.com>",
   "license": "ISC",
-  "repository": "github:Chamion/eslint-plugin-void-only-side-effects"
+  "repository": "github:Chamion/eslint-plugin-void-only-side-effects",
+  "peerDependencies": {
+    "eslint": ">=0.8.0"
+  }
 }
