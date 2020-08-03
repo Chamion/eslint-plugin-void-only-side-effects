@@ -76,6 +76,7 @@ const createVoidOnlySideEffects = (context) => {
 };
 
 module.exports = {
+  create: createVoidOnlySideEffects,
   'void-only-side-effects': {
     meta: {
       type: 'suggestion',
@@ -100,6 +101,23 @@ module.exports = {
         additionalProperties: false
       }]
     },
-    create: createVoidOnlySideEffects
+    configs: {
+      recommended: {
+        plugins: [
+          'void-only-side-effects'
+        ],
+        rules: {
+          'void-only-side-effects/void-only-side-effects': 2
+        }
+      },
+      all: {
+        plugins: [
+          'void-only-side-effects'
+        ],
+        rules: {
+          'void-only-side-effects/void-only-side-effects': 2
+        }
+      }
+    }
   }
 };
