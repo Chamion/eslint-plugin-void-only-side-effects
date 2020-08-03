@@ -76,47 +76,49 @@ const createVoidOnlySideEffects = (context) => {
 };
 
 module.exports = {
-  create: createVoidOnlySideEffects,
-  'void-only-side-effects': {
-    meta: {
-      type: 'suggestion',
-      docs: {
-        description: 'Eslint rule to disallow void on non-side-effect arguments',
-        suggestion: true
-      },
-      fixable: 'code',
-      schema: [{
-        type: 'object',
-        properties: {
-          allowTraps: {
-            type: ['boolean', 'object'],
-            properties: {
-              get: { type: 'boolean' },
-              has: { type: 'boolean' },
-              ownKeys: { type: 'boolean' }
-            },
-            additionalProperties: false
-          }
+  rules: {
+    'void-only-side-effects': {
+      create: createVoidOnlySideEffects,
+      meta: {
+        type: 'suggestion',
+        docs: {
+          description: 'Eslint rule to disallow void on non-side-effect arguments',
+          suggestion: true
         },
-        additionalProperties: false
-      }]
+        fixable: 'code',
+        schema: [{
+          type: 'object',
+          properties: {
+            allowTraps: {
+              type: ['boolean', 'object'],
+              properties: {
+                get: { type: 'boolean' },
+                has: { type: 'boolean' },
+                ownKeys: { type: 'boolean' }
+              },
+              additionalProperties: false
+            }
+          },
+          additionalProperties: false
+        }]
+      }
+    }
+  },
+  configs: {
+    recommended: {
+      plugins: [
+        'void-only-side-effects'
+      ],
+      rules: {
+        'void-only-side-effects/void-only-side-effects': 2
+      }
     },
-    configs: {
-      recommended: {
-        plugins: [
-          'void-only-side-effects'
-        ],
-        rules: {
-          'void-only-side-effects/void-only-side-effects': 2
-        }
-      },
-      all: {
-        plugins: [
-          'void-only-side-effects'
-        ],
-        rules: {
-          'void-only-side-effects/void-only-side-effects': 2
-        }
+    all: {
+      plugins: [
+        'void-only-side-effects'
+      ],
+      rules: {
+        'void-only-side-effects/void-only-side-effects': 2
       }
     }
   }
