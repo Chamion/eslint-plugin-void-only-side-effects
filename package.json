@@ -1,11 +1,11 @@
 {
   "name": "eslint-plugin-void-only-side-effects",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Eslint rule to disallow use of void on non-side-effect arguments",
   "keywords": ["eslint", "eslintplugin"],
   "main": "index.js",
   "author": "Jemi S. Salo <jemi.salo@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "repository": "github:Chamion/eslint-plugin-void-only-side-effects",
   "peerDependencies": {
     "eslint": ">=0.8.0"
