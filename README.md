@@ -59,7 +59,7 @@ void (object.field = value);
 ```
 void 0;
 
-void () => functionCall();
+void (() => functionCall());
 ```
 
 ## allowTraps
