@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-void-only-side-effects",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Eslint rule to disallow use of void on non-side-effect arguments",
   "keywords": ["eslint", "eslintplugin"],
   "main": "index.js",

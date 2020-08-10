@@ -24,23 +24,26 @@ If your code editor supports eslint suggestions, the rule will allow you to appl
 
 ## Usage
 
+Install package.
+
+```
+npm install eslint-plugin-void-only-side-effects --save-dev
+```
+
 In `.eslintrc`
 
 ```
-plugins: [
-  "plugin:void-only-side-effects/recommended"
-]
-```
-
-If that doesn't work on its own, add
-
-```
-rules: [
+"plugins": [
+  "void-only-side-effects"
+],
+"rules": [
   "void-only-side-effects/void-only-side-effects": {severity}
 ]
 ```
 
 Where severity is "error" or "warn".
+
+Verified in eslint version 7.6.0. Older versions may require different configurations.
 
 ## Default
 
